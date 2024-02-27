@@ -2,9 +2,9 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/online-shop-NeDoKaspi-angular">
-      <excludeFolder url="file://$MODULE_DIR$/online-shop-NeDoKaspi-angular/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/online-shop-NeDoKaspi-angular/tmp" />
+    <content url="file://$MODULE_DIR$/lab5">
+      <excludeFolder url="file://$MODULE_DIR$/lab5/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/lab5/tmp" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
