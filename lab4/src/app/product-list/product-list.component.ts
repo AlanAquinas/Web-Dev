@@ -23,7 +23,7 @@ export class ProductListComponent {
 
   shareTG(productName: string, productLink: string) {
     const shareMessage = `Check out this product: ${productName} - ${productLink}`;
-    const whatsappLink = `https://t.me/share/url?url=${encodeURIComponent(shareMessage)}`;
-    window.location.href = whatsappLink;
+    const telegramLink = `https://t.me/share/url?url=${encodeURIComponent(shareMessage)}`;
+    window.location.href = telegramLink;
   }
 }
