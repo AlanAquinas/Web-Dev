@@ -3,8 +3,10 @@ Web Development course in KBTU
 COURSE OBJECTIVES
 The objective of this course is to provide the student with real world tasks from industry and
 find the best solution for them and work in a team.
+
 COURSE OUTCOMES
-In the end of the current course students will know:
+In the end of the current course students will know:\n
+
 ● HTML(5), CSS(3), JavaScript
 ● Node Package Manager (npm)
 ● Angular Modules, Components, Services, Interfaces
