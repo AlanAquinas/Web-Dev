@@ -1,0 +1,49 @@
+<div class="search-bar ">
+  <label for="search">Search:</label>
+  <input type="text" id="search" [(ngModel)]="searchInput" />
+</div>
+
+<div class="product-container">
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <div class="item-card_image-wrapper">
+      <img
+        [src]="product.img"
+        [alt]="product.name"
+      />
+    </div>
+    <div class="item-card__info">
+      <div class="item-card__name">
+        <a class="item-card__name-link" [title]="product.name + ' details'"
+           [href]="product.link"
+           target="_blank">{{product.name}}</a>
+      </div>
+      <div class="item-card__rating">
+        <span class="rating _small _9">
+
+        </span>
+      </div>
+      <div class="item-card__prices">
+        <div class="item-card__debet ">
+          <span class="item-card__prices-title">Цена </span>
+          <span class="item-card__prices-price">{{product.price}} ₸</span>
+        </div>
+      </div>
+    </div>
+    <p *ngIf="product.description">
+      <span>Description: </span>{{ product.description }}
+    </p>
+    <ngb-rating
+            [max]="5"
+            [(rate)]="product.rating"
+            [readonly]="true"
+    ></ngb-rating>
+    <div class="button-container button-row">
+      <button type="button" (click)="shareWA(product.name, product.link)">
+        Share with WhatsApp
+      </button>
+      <button type="button" (click)="shareTG(product.name, product.link)">
+        Share with Telegram
+      </button>
+    </div>
+  </div>
+</div>
