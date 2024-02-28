@@ -2,13 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
-.item-card__debet{
-  padding-top: 10px;
-}
 .product-card {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -18,27 +13,10 @@
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
-/*.product-card {*/
-/*  border: 1px solid #ccc;*/
-/*  border-radius: 8px;*/
-/*  padding: 16px;*/
-/*  margin: 16px 8px;*/
-/*  width: calc(33.33% - 20px);*/
-/*  box-sizing: border-box;*/
-/*  text-align: center;*/
-/*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: space-between;*/
-/*  height: 100%; !* Ensures the card takes the full height of its parent *!*/
-/*}*/
 
 .product-card img {
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   border-radius: 4px;
   margin-bottom: 12px;
@@ -54,8 +32,7 @@
 }
 
 .button-container {
-  margin-top: auto;
-  bottom: 10px;
+  margin-top: 20px;
 }
 
 .product-card button {
@@ -67,7 +44,7 @@
   border-radius: 4px;
   cursor: pointer;
   margin-right: 8px;
-  bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .product-card button:hover {
@@ -80,10 +57,8 @@ img {
 }
 
 ngb-rating {
-  justify-content: center;
   color: yellow;
   font-size: 20px;
-  margin: 15px;
 }
 
 span {
@@ -92,6 +67,28 @@ span {
 
 .price {
   font-size: 20px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
 
 .image-buttons {
@@ -119,4 +116,13 @@ span {
   font-size: 15px;
   margin-right: 1rem;
   margin-top: 0.5rem;
+}
+
+.deletebtn {
+  background-color: red !important;
+}
+
+.likebtn {
+  margin-top: 1rem;
+  background-color: green !important;
 }

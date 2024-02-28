@@ -1,0 +1,17 @@
+.categoryrow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem !important;
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 100px;
+  padding: 0rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+h2 {
+  font-size: 1.5rem !important;
+}
+a {
+  font-size: 1.5rem !important;
+}
