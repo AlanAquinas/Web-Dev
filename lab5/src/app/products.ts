@@ -1,110 +1,320 @@
 export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  link: string;
-  img: string;
-  rating: number;
+    id: number;
+    name: string;
+    color: string;
+    Os: string;
+    hasNfc: boolean;
+    ram: number;
+    rom: number;
+    camera: string;
+    category: number;
+    price: number;
+    likes: number;
+    link: string;
+    imageUrl: string;
 }
 
 export const products = [
-  {
-    id: 1,
-    name: 'Apple 20W USB-C Power Adapter white',
-    price: 2197,
-    description: 'Type: mains charging. Number of connected devices: 1. Fast charging: Yes. Connector: USB Type-C.',
-    link: 'https://kaspi.kz/shop/p/apple-20w-usb-c-power-adapter-belyi-100984093/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/h95/h0e/63961934823454.jpg?format=gallery-medium',
-    rating: 4.5,
-  },
-  {
-    id: 2,
-    name: 'Apple iPhone 13 128Gb Midnight black',
-    price: 298600,
-    description: 'Smartphone Apple iPhone 13 128GB Midnight; Model year. 2022; Display diagonal, inch. 6.1; Display resolution. 2532x1170 ; Matrix type. Super Retina XDR.',
-    link: 'https://kaspi.kz/shop/p/apple-iphone-13-128gb-midnight-chernyi-102298404/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/h32/h70/84378448199710.jpg?format=gallery-medium',
-    rating: 5,
-
-  },
-  {
-    id: 3,
-    name: 'Xiaomi Redmi 12 4G 8GB/256GB black',
-    price: 72000,
-    description: 'Front-camera. 8 Mpx; Amount of RAM. 8 GB ; Built-in memory capacity. 256 GB; Battery capacity. 5000 mAh; Matrix type. FHD.',
-    link: 'https://kaspi.kz/shop/p/xiaomi-redmi-12-4g-8-gb-256-gb-chernyi-110918152/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/h75/hbc/81335343775774.png?format=gallery-medium',
-    rating: 5,
-
-  },
-  {
-    id: 4,
-    name: 'Apple Watch SE 40 mm black',
-    price: 130000,
-    description: 'Apple Watch SE 40mm and 44mm Aluminum cases with a variety of band styles and colors.',
-    link: 'https://kaspi.kz/shop/p/apple-watch-se-40-mm-chernyi-100568123/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/ha3/h60/63868199403550.jpg?format=gallery-medium',
-    rating: 5,
-
-  },
-  {
-    id: 5,
-    name: 'Samsung Galaxy S23 Ultra 12 GB/256 GB black',
-    price: 448374,
-    description: 'Samsung Galaxy S23 Ultra 5G SM-S918B/DS 256GB 12GB RAM, 200 MP Camera, Factory Unlocked, International Model (Phantom Black) ; Display · 6.8 inches, 114.7 cm2',
-    link: 'https://kaspi.kz/shop/p/samsung-galaxy-s23-ultra-12-gb-256-gb-chernyi-109174566/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/h5e/h53/69635680763934.jpg?format=gallery-medium',
-    rating: 5,
-
-  },
-  {
-    id: 6,
-    name: 'Samsung EP-TA800NBEGRU black',
-    price: 1805,
-    description: 'Сетевое зарядное устройство Samsung EP-TA800 с выходной мощностью 25Вт позволит максимально быстро зарядить совместимый со стандартом Super Fast Charging',
-    link: 'https://kaspi.kz/shop/p/samsung-ep-ta800nbegru-chernyi-100972924/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/hfe/h55/64124143173662.jpg?format=gallery-medium',
-    rating: 3.5,
-
-  },
-  {
-    id: 7,
-    name: 'Xiaomi Redmi Watch 3 Active black',
-    price: 17900,
-    description: 'Xiaomi Redmi Watch 3 Active Smart Watch Fitness Tracker with 100 Sport Modes, Blood Oxygen Heart Rate Sleep Monitor, Bluetooth Phone Call Watch for iPhone',
-    link: 'https://kaspi.kz/shop/p/xiaomi-redmi-watch-3-active-chernyi-chernyi-111458311/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/he5/h68/81808098557982.jpg?format=gallery-medium',
-    rating: 4.5,
-
-  },
-  {
-    id: 8,
-    name: 'Samsung Galaxy A05s 4GB/128GB purple',
-    price: 66033,
-    description: 'Samsung Galaxy A05s Android smartphone. Announced Sep 2023. Features 6.7″ display, Snapdragon 680 4G chipset, 5000 mAh battery, 128 GB storage, 6 GB RAM.',
-    link: 'https://kaspi.kz/shop/p/samsung-galaxy-a05s-4-gb-128-gb-fioletovyi-114693084/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/h61/hd2/84523124916254.png?format=gallery-medium',
-    rating: 4,
-  },
-  {
-    id: 9,
-    name: 'Apple iPhone 15 Pro Max 256Gb gray',
-    price: 614343,
-    description: ' Titanium design. A17 Pro chip. 48MP Main camera. Record spatial video for Apple Vision Pro. Action button. USB-C.',
-    link: 'https://kaspi.kz/shop/p/apple-iphone-15-pro-max-256gb-seryi-113138420/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/hc1/h65/83559848181790.png?format=gallery-medium',
-    rating: 5,
-  },
-  {
-    id: 10,
-    name: 'Huawei Watch GT 4 46 mm silver-brown',
-    price: 65599,
-    description: 'With a new octagonal design, an innovative strap fastening and a larger AMOLED screen, the HUAWEI WATCH GT 4 is a versatile smartwatch',
-    link: 'https://kaspi.kz/shop/p/huawei-watch-gt-4-46-mm-serebristyi-korichnevyi-113401498/?c=750000000',
-    img: 'https://resources.cdn-kaspi.kz/img/m/p/h3a/h59/83882243915806.jpg?format=gallery-medium',
-    rating: 4.5,
-  }
+    {
+        id: 1,
+        name: 'Google Pixel 7',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '50MP + 12MP',
+        category: 1,
+        price: 217001,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/hfe/hb5/84424699838494.png?format=gallery-medium'
+    },
+    {
+        id: 2,
+        name: 'Xiaomi Redmi Note 12 Pro',
+        color: 'gray',
+        Os: 'Android 12',
+        hasNfc: true,
+        ram: 8,
+        rom: 256,
+        camera: '108MP + 8MP + 2MP + 5MP',
+        category: 2,
+        price: 121885,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h02/ha0/79846423199774.jpg?format=gallery-medium'
+    },
+    {
+        id: 3,
+        name: 'IPhone 15 Pro Max',
+        color: 'black',
+        Os: 'iOS 17',
+        hasNfc: true,
+        ram: 8,
+        rom: 1024,
+        camera: '48MP + 12MP + 12MP',
+        category: 3,
+        price: 940894,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/hc6/h5d/84076355977246.jpg?format=gallery-medium'
+    },
+    {
+        id: 4,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 4,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 5,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 4,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 6,
+        name: 'Google Pixel 8',
+        color: 'black',
+        Os: 'Android',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '50MP + 12MP',
+        category: 1,
+        price: 285900,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-8-8-gb-128-gb-chernyi-113692654/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/hcf/he9/84136091254814.jpg?format=gallery-medium'
+    },
+    {
+        id: 7,
+        name: 'Google Pixel 7 Pro',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 12,
+        rom: 128,
+        camera: '50MP + 12MP + 48MP',
+        category: 1,
+        price: 274899,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-pro-12-gb-128-gb-chernyi-107066141/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h26/h67/63603038289950.jpg?format=gallery-medium'
+    },
+    {
+        id: 8,
+        name: 'Google Pixel 7A',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 1,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7a-8-gb-128-gb-chernyi-110489765/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/hcd/h87/80879192047646.jpg?format=gallery-medium'
+    },
+    {
+        id: 9,
+        name: 'Google Pixel 8 Pro',
+        color: 'beige',
+        Os: 'Android',
+        hasNfc: true,
+        ram: 12,
+        rom: 128,
+        camera: '50MP + 48MP + 48MP',
+        category: 1,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-8-pro-12-gb-128-gb-bezhevyi-113692579/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/hfe/h21/84136159182878.jpg?format=gallery-medium'
+    },
+    {
+        id: 10,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 2,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 11,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 2,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 12,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 2,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 13,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 2,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 14,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 3,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 15,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 3,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 16,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 3,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 17,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 3,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 18,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 4,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 19,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 4,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    },
+    {
+        id: 20,
+        name: 'OPPO Reno 8T',
+        color: 'black',
+        Os: 'Android 13',
+        hasNfc: true,
+        ram: 8,
+        rom: 128,
+        camera: '100MP + 2MP + 2MP',
+        category: 4,
+        price: 139500,
+        likes: 0,
+        link: 'https://kaspi.kz/shop/p/google-pixel-7-8-gb-128-gb-chernyi-106971937/?c=750000000',
+        imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h4e/h64/70342818955294.jpg?format=gallery-medium'
+    }
 ];
 
 
