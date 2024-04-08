@@ -4,7 +4,7 @@ from django.core.management import BaseCommand
 from faker import Faker
 from django.utils import timezone
 
-from api.models import Company, Vacancy
+from hh_back.api.models import Company, Vacancy
 
 fake = Faker()
 
