@@ -1,15 +1,28 @@
 import random
-
-from django.core.management import BaseCommand
-from faker import Faker
+from django.core.management.base import BaseCommand
 from django.utils import timezone
-
-from hh_back.api.models import Company, Vacancy
+from faker import Faker
+from api.models import Company, Vacancy
 
 fake = Faker()
 
 class Command(BaseCommand):
-    def generate_companies(num_companies):
+    help = 'Generate fake companies and vacancies data'
+
+    def add_arguments(self, parser):
+        parser.add_argument('num_companies', type=int, default=10, help='Number of companies to generate')
+        parser.add_argument('num_vacancies', type=int, default=50, help='Number of vacancies to generate')
+
+    def handle(self, *args, **options):
+        num_companies = options['num_companies']
+        num_vacancies = options['num_vacancies']
+
+        self.generate_companies(num_companies)
+        self.generate_vacancies(num_vacancies, num_companies)
+
+        self.stdout.write(self.style.SUCCESS("Data generation completed."))
+
+    def generate_companies(self, num_companies):
         for _ in range(num_companies):
             company = Company.objects.create(
                 name=fake.company(),
@@ -17,9 +30,9 @@ class Command(BaseCommand):
                 city=fake.city(),
                 address=fake.address(),
             )
-            yield company
+            self.stdout.write(self.style.SUCCESS(f"Created Company: {company}"))
 
-    def generate_vacancies(num_vacancies, num_companies):
+    def generate_vacancies(self, num_vacancies, num_companies):
         companies = list(Company.objects.all())
         for _ in range(num_vacancies):
             vacancy = Vacancy.objects.create(
@@ -28,19 +41,4 @@ class Command(BaseCommand):
                 salary=random.uniform(30000, 100000),  # Adjust salary range as needed
                 company=random.choice(companies),
             )
-            yield vacancy
-
-    # Usage example:
-    # Generate 10 companies and 50 vacancies
-    num_companies = 10
-    num_vacancies = 50
-
-    companies_generator = generate_companies(num_companies)
-    vacancies_generator = generate_vacancies(num_vacancies, num_companies)
-
-    # You can iterate over the generators to create and save objects
-    for company in companies_generator:
-        print(f"Created Company: {company}")
-
-    for vacancy in vacancies_generator:
-        print(f"Created Vacancy: {vacancy}")
+            self.stdout.write(self.style.SUCCESS(f"Created Vacancy: {vacancy}"))
