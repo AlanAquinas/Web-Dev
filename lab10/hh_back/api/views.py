@@ -6,11 +6,7 @@ class CompanyList(generics.ListAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
 
-class CompanyDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Company.objects.all()
-    serializer_class = CompanySerializer
-
-class CompanyCreate(generics.CreateAPIView):
+class CompanyDetail(generics.RetrieveAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
 
@@ -27,14 +23,11 @@ class VacancyList(generics.ListAPIView):
     queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
 
-class VacancyCreate(generics.CreateAPIView):
-    queryset = Vacancy.objects.all()
-    serializer_class = VacancySerializer
-
-class VacancyDetail(generics.RetrieveUpdateDestroyAPIView):
+class VacancyDetail(generics.RetrieveAPIView):
     queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
 
 class TopTenVacanciesList(generics.ListAPIView):
     queryset = Vacancy.objects.order_by('-salary')[:10]
     serializer_class = VacancySerializer
+
